@@ -1,0 +1,49 @@
+subscription_id             = "00000000-1111-2222-3333-444444444444"
+network_resource_group_name = "rg-tf-networking-west"
+resource_group_location     = "westus3"
+
+uswest3_vnet_name                    = "tf-uswest3-vnet1"
+uswest3_vnet_address_space           = "10.50.0.0/16"
+uswest3_location                     = "westus3"
+uswest3_default_subnet_prefix        = "10.50.0.0/26"
+uswest3_vm_subnet_prefix             = "10.50.0.64/29"
+uswest3_firewall_subnet_prefix       = "10.50.0.128/26"
+uswest3_firewall_mgmt_subnet_prefix  = "10.50.0.192/26"
+uswest3_firewall_name                = "tf-uswest3-azfw1"
+uswest3_firewall_policy_name         = "tf-uswest3-azfw1-policy"
+uswest3_firewall_public_ip_name      = "tf-uswest3-azfw1-pip"
+uswest3_firewall_mgmt_public_ip_name = "tf-uswest3-azfw1-mgmt-pip"
+uswest3_route_table_name             = "tf-uswest3-rt-azfw"
+
+uswest1_vnet_name             = "tf-uswest1-vnet1"
+uswest1_vnet_address_space    = "10.51.0.0/16"
+uswest1_location              = "westus"
+uswest1_gateway_subnet_prefix = "10.51.0.224/27"
+uswest1_vm_subnet_prefix      = "10.51.0.0/29"
+
+uswest1_vm_name           = "tf-uswest1-vm1"
+uswest1_vm_nic_name       = "tf-uswest1-vm1-nic1"
+uswest1_vm_size           = "Standard_D2as_v5"
+uswest1_vm_admin_username = "zbc-admin"
+uswest1_vm_admin_password = "SuperSecretPassw0rd!"
+
+vpn_gateway_name           = "tf-uswest1-vpngw1"
+vpn_gateway_public_ip_name = "tf-uswest1-vpngw1-pip"
+vpn_gateway_sku            = "VpnGw1"
+
+local_network_gateway_name           = "homelab-onprem"
+local_network_gateway_public_ip      = "203.0.113.24"
+local_network_gateway_address_spaces = ["10.0.0.0/24"]
+vpn_connection_name                  = "tf-uswest1-s2s-conn1"
+vpn_connection_shared_key            = "AnotherS3cretKey!"
+
+uswest3_vm_name           = "tf-uswest3-vm1"
+uswest3_vm_nic_name       = "tf-uswest3-vm1-nic1"
+uswest3_vm_size           = "Standard_D2as_v5"
+uswest3_vm_admin_username = "zbc-admin"
+uswest3_vm_admin_password = "SuperSecretPassw0rd!"
+
+tags = {
+  Environment = "Dv"
+  ManagedBy   = "Terraform"
+}
